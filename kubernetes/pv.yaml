@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  namespace: resume
+  name: "resume"
+spec:
+  capacity:
+    storage: "20Gi"
+  accessModes:
+    - "ReadWriteOnce"
+  storageClassName: resume
+  gcePersistentDisk:
+    fsType: "ext4"
+    pdName: "pd-disk-1"
